@@ -1,0 +1,37 @@
+[
+{
+        "id":1,
+        "first-name": "mudasir",
+        "job-title": "Web Developer III",
+        "email": "Amazon",
+        "gender": "software engineer II"
+},
+{
+    "id":2,
+    "first-name": "muzamil",
+    "job-title": "Accountant",
+    "email": "VP Sales",
+    "gender": "Accounting Assistant II"
+},
+{
+    "id":3,
+    "first-name": "shahid",
+    "job-title": "mazoor",
+    "email": "shahi",
+    "gender": "student"
+},
+{
+    "id":4,
+    "first-name": "muhaib",
+    "job-title": "Web Developer III",
+    "email": "VP Sales",
+    "gender": "Accounting Assistant II"
+},
+{
+    "id":5,
+    "first-name": "zuhaib",
+    "job-title": "Web Developer III",
+    "email": "VP Sales",
+    "gender": "Accounting Assistant II"
+}
+]

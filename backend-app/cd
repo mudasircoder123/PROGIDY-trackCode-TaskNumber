@@ -1,0 +1,81 @@
+
+Copy code
+import React, { useState } from 'react';
+import axios from 'axios';
+
+const Register = () => {
+    const [form, setForm] = useState({ name: '', email: '', password: '' });
+    const [error, setError] = useState(null);
+
+    const handleChange = (e) => {
+        setForm({ ...form, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post('http://localhost:3400/register', form);
+            alert(response.data.message);
+        } catch (err) {
+            setError(err.response.data.error);
+        }
+    };
+
+    return (
+        <div>
+            <h2>Register</h2>
+            <form onSubmit={handleSubmit}>
+                <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="Name" />
+                <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="Email" />
+                <input type="password" name="password" value={form.password} onChange={handleChange} placeholder="Password" />
+                <button type="submit">Register</button>
+            </form>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+        </div>
+    );
+};
+
+export default Register;
+The same approach can be used for the login component:
+
+jsx
+Copy code
+import React, { useState } from 'react';
+import axios from 'axios';
+
+const Login = () => {
+    const [form, setForm] = useState({ email: '', password: '' });
+    const [error, setError] = useState(null);
+
+    const handleChange = (e) => {
+        setForm({ ...form, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post('http://localhost:3400/login', form);
+            alert(response.data.message);
+        } catch (err) {
+            setError(err.response.data.error);
+        }
+    };
+
+    return (
+        <div>
+            <h2>Login</h2>
+            <form onSubmit={handleSubmit}>
+                <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="Email" />
+                <input type="password" name="password" value={form.password} onChange={handleChange} placeholder="Password" />
+                <button type="submit">Login</button>
+            </form>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+        </div>
+    );
+};
+
+export default Login;
+Summary
+Backend: Ensure error messages are returned as JSON objects.
+Frontend: Capture these error messages and display them to the user.
+This way, users will get clear feedback on why their registration or login attempts fail
