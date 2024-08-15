@@ -1,0 +1,15 @@
+*{
+    margin:0;
+    padding:0;
+ }
+ h2{
+ text-align: center;
+color:#fff;
+ }    
+.input{
+height:47px;
+}
+.label{
+font-size: 35px;
+color:#fff;
+}

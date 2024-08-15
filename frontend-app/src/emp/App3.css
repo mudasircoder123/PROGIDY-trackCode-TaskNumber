@@ -1,0 +1,25 @@
+.Container {
+    padding: 20px;
+  }
+  
+  .Card {
+    margin-top: 20px;
+  }
+  
+  .Button {
+    margin-right: 10px;
+  }
+  
+  .Table {
+    margin-top: 20px;
+  }
+  
+  thead {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  

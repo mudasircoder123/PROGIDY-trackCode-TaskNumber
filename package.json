@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "git": "^0.1.5",
     "react-bootstrap": "^2.10.2"
   }
 }
