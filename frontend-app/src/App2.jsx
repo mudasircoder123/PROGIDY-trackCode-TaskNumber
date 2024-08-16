@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter,Routes,Route} from "react-router-dom";
 import Registration from "./Registration";
-import Log from "./Log";
+import Log from "./authentication/Log";
 import Host from "./Host";
-import Component from "./Component";
+import Component from "./authentication/Component";
 const App2 = () => {
 return(
 <>
